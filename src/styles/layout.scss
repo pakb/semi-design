@@ -456,37 +456,34 @@ $spCol: var(--semi-color-primary);
     }
 }
 
-:global {
+:global(body) {
+    display: block;
 
-    body {
-        display: block;
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
 
-        &::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
+    &::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0);
+    }
 
-        &::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0);
-        }
+    &::-webkit-scrollbar-corner {
+        background-color: rgba(0, 0, 0, 0);
+    }
 
-        &::-webkit-scrollbar-corner {
-            background-color: rgba(0, 0, 0, 0);
-        }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        background: transparent;
+        transition: all 1s;
+    }
 
-        &::-webkit-scrollbar-thumb {
-            border-radius: 6px;
-            background: transparent;
-            transition: all 1s;
-        }
+    &:hover::-webkit-scrollbar-thumb {
+        background: var(--semi-color-fill-2);
+    }
 
-        &:hover::-webkit-scrollbar-thumb {
-            background: var(--semi-color-fill-2);
-        }
-
-        &::-webkit-scrollbar-thumb:hover {
-            background: var(--semi-color-fill-1);
-        }
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(--semi-color-fill-1);
     }
 }
 
